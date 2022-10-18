@@ -3,7 +3,10 @@ package com.aaronr92.engine;
 import org.lwjgl.glfw.GLFWErrorCallback;
 import org.lwjgl.glfw.GLFWVidMode;
 import org.lwjgl.opengl.GL;
+import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL12;
+
+import java.util.logging.Logger;
 
 import static org.lwjgl.glfw.GLFW.*;
 import static org.lwjgl.system.MemoryUtil.NULL;
@@ -38,10 +41,12 @@ public class Window {
         // Setup window hints
         glfwDefaultWindowHints();
         glfwWindowHint(GLFW_VISIBLE, GLFW_FALSE);
+
         if (resizable)
             glfwWindowHint(GLFW_RESIZABLE, GLFW_TRUE);
         else
             glfwWindowHint(GLFW_RESIZABLE, GLFW_FALSE);
+
         glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
         glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
         glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GLFW_TRUE);
@@ -95,6 +100,16 @@ public class Window {
 
     public void update() {
         glfwSwapBuffers(windowHandle);
+
+        GL11.glBegin(GL11.GL_QUADS);
+
+        GL11.glVertex2f(-0.5f, 0.5f);
+        GL11.glVertex2f(0.5f, 0.5f);
+        GL11.glVertex2f(0.5f, -0.5f);
+        GL11.glVertex2f(-0.5f, -0.5f);
+
+        GL11.glEnd();
+
         glfwPollEvents();
     }
 

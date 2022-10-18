@@ -45,13 +45,8 @@ public class WerewolfGameLogic implements IGameLogic {
 
     @Override
     public void render(Window window) {
-        if (window.isResized()) {
-            GL11.glViewport(0, 0, window.getWidth(), window.getHeight());
-            window.setResized(false);
-        }
-
         window.setClearColor(color, color, color, 0.0f);
-        renderer.clear();
+        renderer.render(window);
     }
 
     @Override
