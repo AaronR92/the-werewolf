@@ -53,6 +53,7 @@ public class Window {
 
         // Create the window
         windowHandle = glfwCreateWindow(width, height, title, 0, 0);
+
         if (windowHandle == NULL) {
             throw new RuntimeException("Failed to create the GLFW window");
         }
@@ -95,21 +96,11 @@ public class Window {
         GL.createCapabilities();
 
         // Clear screen
-        GL12.glClearColor(0f, 0f, 0f, 0f);
+        GL11.glClearColor(0f, 0f, 0f, 0f);
     }
 
     public void update() {
         glfwSwapBuffers(windowHandle);
-
-        GL11.glBegin(GL11.GL_QUADS);
-
-        GL11.glVertex2f(-0.5f, 0.5f);
-        GL11.glVertex2f(0.5f, 0.5f);
-        GL11.glVertex2f(0.5f, -0.5f);
-        GL11.glVertex2f(-0.5f, -0.5f);
-
-        GL11.glEnd();
-
         glfwPollEvents();
     }
 

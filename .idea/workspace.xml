@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c3205562-56f4-4116-945e-f315b9db30f1" name="Changes" comment="Bux fixes">
+    <list default="true" id="c3205562-56f4-4116-945e-f315b9db30f1" name="Changes" comment="Trying to draw square">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/aaronr92/game/NewMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/aaronr92/engine/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aaronr92/engine/Window.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aaronr92/game/Renderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aaronr92/game/Renderer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aaronr92/game/WerewolfGameLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aaronr92/game/WerewolfGameLogic.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +58,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="NewMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.aaronr92.game.NewMain" />
+      <module name="the-werewolf" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.aaronr92.game.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="the-werewolf-1.0-SNAPSHOT.jar" type="JarApplication" temporary="true">
       <option name="JAR_PATH" value="$PROJECT_DIR$/target/the-werewolf-1.0-SNAPSHOT.jar" />
       <method v="2" />
@@ -66,6 +78,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.NewMain" />
         <item itemvalue="JAR Application.the-werewolf-1.0-SNAPSHOT.jar" />
       </list>
     </recent_temporary>
