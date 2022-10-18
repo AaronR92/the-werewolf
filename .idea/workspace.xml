@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c3205562-56f4-4116-945e-f315b9db30f1" name="Changes" comment="Trying to draw square">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aaronr92/game/NewMain.java" afterDir="false" />
+    <list default="true" id="c3205562-56f4-4116-945e-f315b9db30f1" name="Changes" comment="Experimented with glDraw">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/aaronr92/engine/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aaronr92/engine/Window.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aaronr92/game/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aaronr92/game/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,6 +93,7 @@
       <updated>1665834779488</updated>
       <workItem from="1665834780809" duration="6625000" />
       <workItem from="1666106874343" duration="4216000" />
+      <workItem from="1666115731702" duration="713000" />
     </task>
     <task id="LOCAL-00001" summary="Opening window">
       <created>1666107179016</created>
@@ -108,7 +109,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666110155174</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Experimented with glDraw">
+      <created>1666114397338</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1666114397338</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -129,6 +137,7 @@
     <MESSAGE value="Open window" />
     <MESSAGE value="Opening window" />
     <MESSAGE value="Bux fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bux fixes" />
+    <MESSAGE value="Experimented with glDraw" />
+    <option name="LAST_COMMIT_MESSAGE" value="Experimented with glDraw" />
   </component>
 </project>

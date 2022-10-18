@@ -9,7 +9,7 @@ public class Main {
         try {
             IGameLogic gameLogic = new WerewolfGameLogic();
             GameEngine engine = new GameEngine("LWJGL Application", 1280, 720,
-                    true, false, gameLogic);
+                    true, true, gameLogic);
             engine.run();
         } catch (Exception e) {
             e.printStackTrace();

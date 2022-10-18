@@ -47,6 +47,7 @@ public class Window {
         else
             glfwWindowHint(GLFW_RESIZABLE, GLFW_FALSE);
 
+        // TODO: glBegin not launches because of incompatible version proly
         glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
         glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
         glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GLFW_TRUE);
@@ -100,6 +101,12 @@ public class Window {
     }
 
     public void update() {
+        GL11.glBegin(GL11.GL_QUADS);
+        GL11.glVertex2f(-0.5f, 0.5f);
+        GL11.glVertex2f(0.5f, 0.5f);
+        GL11.glVertex2f(0.5f, -0.5f);
+        GL11.glVertex2f(-0.5f, -0.5f);
+        GL11.glEnd();
         glfwSwapBuffers(windowHandle);
         glfwPollEvents();
     }
