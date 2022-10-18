@@ -7,10 +7,9 @@ public class Main {
 
     public static void main(String[] args) {
         try {
-            boolean vSync = true;
             IGameLogic gameLogic = new WerewolfGameLogic();
-            GameEngine engine = new GameEngine("TestApplication", 600, 400,
-                    vSync, gameLogic);
+            GameEngine engine = new GameEngine("LWJGL Application", 1280, 720,
+                    true, false, gameLogic);
             engine.run();
         } catch (Exception e) {
             e.printStackTrace();

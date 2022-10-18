@@ -11,8 +11,8 @@ public class GameEngine implements Runnable {
     private final Timer timer;
     private final IGameLogic gameLogic;
 
-    public GameEngine(String windowTitle, int width, int height, boolean vSync, IGameLogic gameLogic) {
-        this.window = new Window(windowTitle, width, height, vSync);
+    public GameEngine(String windowTitle, int width, int height, boolean vSync, boolean resizable, IGameLogic gameLogic) {
+        this.window = new Window(windowTitle, width, height, vSync, resizable);
         this.timer = new Timer();
         this.gameLogic = gameLogic;
     }
@@ -24,6 +24,8 @@ public class GameEngine implements Runnable {
             gameLoop();
         } catch (Exception e) {
             e.printStackTrace();
+        } finally {
+            cleanup();
         }
     }
 
@@ -80,6 +82,10 @@ public class GameEngine implements Runnable {
     protected void render() {
         gameLogic.render(window);
         window.update();
+    }
+
+    protected void cleanup() {
+        gameLogic.cleanup();
     }
 
     public static void setFPS(int fps) {

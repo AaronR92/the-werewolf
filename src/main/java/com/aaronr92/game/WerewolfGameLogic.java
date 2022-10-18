@@ -53,4 +53,9 @@ public class WerewolfGameLogic implements IGameLogic {
         window.setClearColor(color, color, color, 0.0f);
         renderer.clear();
     }
+
+    @Override
+    public void cleanup() {
+        renderer.cleanup();
+    }
 }

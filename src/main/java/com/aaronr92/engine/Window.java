@@ -16,13 +16,15 @@ public class Window {
     private boolean vSync;
     private long windowHandle;
     private boolean resized;
+    private boolean resizable;
 
-    public Window(String title, int width, int height, boolean vSync) {
+    public Window(String title, int width, int height, boolean vSync, boolean resizable) {
         this.title = title;
         this.width = width;
         this.height = height;
         this.vSync = vSync;
         this.resized = false;
+        this.resizable = resizable;
     }
 
     public void init() {
@@ -36,7 +38,10 @@ public class Window {
         // Setup window hints
         glfwDefaultWindowHints();
         glfwWindowHint(GLFW_VISIBLE, GLFW_FALSE);
-        glfwWindowHint(GLFW_RESIZABLE, GLFW_TRUE);
+        if (resizable)
+            glfwWindowHint(GLFW_RESIZABLE, GLFW_TRUE);
+        else
+            glfwWindowHint(GLFW_RESIZABLE, GLFW_FALSE);
         glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
         glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
         glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GLFW_TRUE);
