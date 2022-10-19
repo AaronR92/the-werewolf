@@ -98,12 +98,6 @@ public class Window {
     }
 
     public void update() {
-        GL11.glBegin(GL11.GL_QUADS);
-        GL11.glVertex2f(-0.5f, 0.5f);
-        GL11.glVertex2f(0.5f, 0.5f);
-        GL11.glVertex2f(0.5f, -0.5f);
-        GL11.glVertex2f(-0.5f, -0.5f);
-        GL11.glEnd();
         glfwSwapBuffers(windowHandle);
         glfwPollEvents();
     }
