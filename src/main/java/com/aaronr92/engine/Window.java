@@ -6,17 +6,16 @@ import org.lwjgl.opengl.GL;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL12;
 
-import java.util.logging.Logger;
 
 import static org.lwjgl.glfw.GLFW.*;
 import static org.lwjgl.system.MemoryUtil.NULL;
 
 public class Window {
 
-    private String title;
+    private final String title;
     private int width;
     private int height;
-    private boolean vSync;
+    private final boolean vSync;
     private long windowHandle;
     private boolean resized;
     private boolean resizable;
@@ -47,10 +46,8 @@ public class Window {
         else
             glfwWindowHint(GLFW_RESIZABLE, GLFW_FALSE);
 
-        // TODO: glBegin not launches because of incompatible version proly
         glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
         glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
-        glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GLFW_TRUE);
 
         // Create the window
         windowHandle = glfwCreateWindow(width, height, title, 0, 0);
