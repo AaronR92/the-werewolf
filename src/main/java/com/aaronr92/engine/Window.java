@@ -93,6 +93,8 @@ public class Window {
 
         GL.createCapabilities();
 
+        GL11.glEnable(GL11.GL_TEXTURE_2D);
+
         // Clear screen
         GL11.glClearColor(0f, 0f, 0f, 0f);
     }
