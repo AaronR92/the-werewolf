@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c3205562-56f4-4116-945e-f315b9db30f1" name="Changes" comment="Bug fixed">
+    <list default="true" id="c3205562-56f4-4116-945e-f315b9db30f1" name="Changes" comment="Colored square">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aaronr92/engine/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aaronr92/engine/Window.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/aaronr92/game/Renderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aaronr92/game/Renderer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -94,7 +93,7 @@
       <workItem from="1665834780809" duration="6625000" />
       <workItem from="1666106874343" duration="4216000" />
       <workItem from="1666115731702" duration="791000" />
-      <workItem from="1666158109863" duration="436000" />
+      <workItem from="1666158109863" duration="522000" />
     </task>
     <task id="LOCAL-00001" summary="Opening window">
       <created>1666107179016</created>
@@ -131,7 +130,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666158304344</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Colored square">
+      <created>1666158562417</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1666158562417</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -155,6 +161,7 @@
     <MESSAGE value="Experimented with glDraw" />
     <MESSAGE value="Bug found" />
     <MESSAGE value="Bug fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bug fixed" />
+    <MESSAGE value="Colored square" />
+    <option name="LAST_COMMIT_MESSAGE" value="Colored square" />
   </component>
 </project>

@@ -20,10 +20,10 @@ public class Renderer {
         glColor3f(0, 1, 0);
         glVertex2f(0.5f, 0.5f);
 
-        glColor3f(0, 0, 1);
+        glColor3f(1, 1, 1);
         glVertex2f(0.5f, -0.5f);
 
-        glColor3f(1, 1, 1);
+        glColor3f(0, 0, 1);
         glVertex2f(-0.5f, -0.5f);
 
         glEnd();
