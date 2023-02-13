@@ -91,4 +91,8 @@ public class GameEngine implements Runnable {
     public static void setFPS(int fps) {
         TARGET_FPS = fps;
     }
+
+    public static String getResourcesFolder() {
+        return "src/main/resources/";
+    }
 }

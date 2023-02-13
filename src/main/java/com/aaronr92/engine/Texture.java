@@ -26,24 +26,32 @@ public class Texture {
 
     private void init(String filename) {
         try {
-            bufferedImage = ImageIO.read(new File(filename));
+            File f = new File(filename);
+            System.out.println(f.exists());
+            bufferedImage = ImageIO.read(f);
 
             this.width = bufferedImage.getWidth();
             this.height = bufferedImage.getHeight();
 
             // getting pixels
-            int[] pixelsRaw = new int[width * height * 4];
-            pixelsRaw = bufferedImage.getRGB(0, 0, width, height, null, 0, width);
+            int[] pixelsRaw =
+                    bufferedImage.getRGB(0, 0, width, height, null, 0, width);
 
-            ByteBuffer pixels = BufferUtils.createByteBuffer(width * height * 4);
+            ByteBuffer pixels = BufferUtils
+                    .createByteBuffer(width * height * 4);
+
+            System.out.println(pixelsRaw.length);
+            System.out.println(pixels.capacity());
 
             for (int i = 0; i < width; i++) {
+                System.out.println("i " + i);
                 for (int j = 0; j < height; j++) {
-                    int pixel = pixelsRaw[i * width + j];
+                    System.out.println("j " + j);
+                    int pixel = pixelsRaw[j * width];
 
                     pixels.put((byte) ((pixel >> 16) & 0xFF));  // RED
                     pixels.put((byte) ((pixel >> 8) & 0xFF));   // GREEN
-                    pixels.put((byte) (pixel& 0xFF));           // BLUE
+                    pixels.put((byte) (pixel & 0xFF));          // BLUE
                     pixels.put((byte) ((pixel >> 24) & 0xFF));  // ALPHA
                 }
             }

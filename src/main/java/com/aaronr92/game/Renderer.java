@@ -1,15 +1,19 @@
 package com.aaronr92.game;
 
+import com.aaronr92.engine.GameEngine;
 import com.aaronr92.engine.IRenderer;
+import com.aaronr92.engine.Texture;
 import com.aaronr92.engine.Window;
 import static org.lwjgl.opengl.GL11.*;
 
 public class Renderer implements IRenderer {
 
     private boolean isDrawing;
+    private Texture texture;
 
     public void init() {
         isDrawing = false;
+        texture = new Texture(GameEngine.getResourcesFolder() + "/Caslte.png");
     }
 
     @Override
@@ -18,16 +22,16 @@ public class Renderer implements IRenderer {
 
         glBegin(GL_QUADS);
 
-        glColor3f(1, 0, 0);
+        glTexCoord2f(0, 0);
         glVertex2f(-0.5f, 0.5f);
 
-        glColor3f(0, 1, 0);
+        glTexCoord2f(1, 0);
         glVertex2f(0.5f, 0.5f);
 
-        glColor3f(1, 1, 1);
+        glTexCoord2f(1, 1);
         glVertex2f(0.5f, -0.5f);
 
-        glColor3f(0, 0, 1);
+        glTexCoord2f(0, 1);
         glVertex2f(-0.5f, -0.5f);
 
         glEnd();
